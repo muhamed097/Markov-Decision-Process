@@ -6,17 +6,15 @@ Created on Mon Oct 10 17:43:32 2016
 """
 import sys
 
-dummy1 = sys.argv[1] #no need for number of states
-dummy2 = sys.argv[2] #no need for number of actions
-file = sys.argv[3]
-discount = sys.argv[4]
+file = sys.argv[1]
+discount = sys.argv[2]
 discount = float(discount)
 
 
 with open(file, "r") as inputs:
     data = inputs.read().split("\n")
     
-#used for creation of dictionary so that you can end up with 
+#used for creation of dictionary so that you can end up with state names 
 def name(i):
     '''Trivial eq. for creating state names to pair with reward values'''
     return "s" + str(i)
